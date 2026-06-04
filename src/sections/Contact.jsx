@@ -11,8 +11,8 @@ export default function Contact() {
     const formData = new FormData(form.current);
 
     const name = formData.get("name");
-    const email = formData.get("email");
-    const phone = formData.get("phone");
+    const date = formData.get("date");
+    const time = formData.get("time");
     const message = formData.get("message");
 
     try {
@@ -31,9 +31,9 @@ Hola Mariachi El Son Mexicano.
 
 Mi nombre es: ${name}
 
-Correo: ${email}
+Fecha de Evento: ${date}
 
-Teléfono: ${phone}
+Horario de Evento: ${time}
 
 Información del evento:
 ${message}
@@ -135,9 +135,9 @@ ${message}
             />
 
             <input
-              type="email"
-              name="email"
-              placeholder="Correo"
+              type="date"
+              name="date"
+              placeholder="Fecha del Evento"
               required
               className="
               w-full
@@ -149,9 +149,9 @@ ${message}
             />
 
             <input
-              type="tel"
-              name="phone"
-              placeholder="Teléfono"
+              type="time"
+              name="time"
+              placeholder="Horario del Evento"
               required
               className="
               w-full
